@@ -40,6 +40,8 @@ ln -sf ${APKG_PATH}/sbin/reboot /opt/sbin/reboot 2>&1 | tee -a $LOG
 echo "Restore WD service module paths" | tee -a $LOG
 WDOPT=/usr/local/modules/opt/wd
 ln -sf ${WDOPT} /opt/wd 2>&1 | tee -a $LOG
+ln -sf /usr/local/modules/perl5.10 /opt/perl5.10 2>&1 | tee -a $LOG
+ln -sf /usr/local/firefly /opt/firefly 2>&1 | tee -a $LOG
 
 echo "Unmount again" | tee -a $LOG
 umount /opt 2>&1 | tee -a $LOG
